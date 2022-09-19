@@ -11,11 +11,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Register ESD</li>
               </ol>
             </nav>
-          </div>
-          <!-- <div class="col-lg-6 col-5 text-right">
-            <a href="#" class="btn btn-sm btn-neutral">New</a>
-            <a href="#" class="btn btn-sm btn-neutral">Filters</a>
-          </div> -->
+          </div>    
         </div>
       </div>
     </div>
@@ -27,80 +23,64 @@
         <div class="card">
           
           <!-- Add ESD new -->
-          <nav class="main-nav">
-            
-                      
-                <li><a class="signup" >Create new ESD</a></li>
-                <!-- <li><a href="/add-user" class="signup">Create new ESD2</a></li> -->
-              
-              
-            
-          </nav>
+          <button id="modal-btn" class="button">Click Here</button>
           
-          <div class="user-modal">
-              <div class="user-modal-container">
-                
-                  
-                  <p>New ESD</p>
-                
-          
-                
-          
-                <div id="signup">
-                  <form class="form" action="/api/iotInfo" method="POST">
-                    <p class="fieldset">
-                      <label class="image-replace username" for="signup-username">ESD name</label>
-                      <input class="full-width has-padding has-border" name="id" type="hidden" value="">
-                      <input class="full-width has-padding has-border" name="esdName" type="text" placeholder="ESD name">
-                      <span class="error-message">Your ESD name can only contain numeric and alphabetic symbols!</span>
-                    </p>
-          
-                    <p class="fieldset">
-                      <label class="image-replace email" for="signup-email">Location</label>
-                      <input class="full-width has-padding has-border" name="id" type="hidden" value="">
-                      <input class="full-width has-padding has-border" name="location" type="text" placeholder="Location">
-                      <span class="error-message">Your location can only contain numeric and alphabetic symbols!</span>
-                    </p>
-          
+          <div id="my-modal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+              </div>
+              <div class="modal-body">
+
+
+
+                <!-- <p>This is my modal</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
+                  repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
+                  commodi ab.</p> -->
+                    <div id="signup">
+                      <form class="form" action="/api/iotInfo" method="POST">
+                        <p class="fieldset">
+                          <label class="image-replace username" for="signup-username">ESD name</label>
+                          <input class="full-width has-padding has-border" name="id" type="hidden" value="">
+                          <input class="full-width has-padding has-border" name="esdName" type="text" placeholder="ESD name">
+                          <span class="error-message">Your ESD name can only contain numeric and alphabetic symbols!</span>
+                        </p>
                     
-          
+                        <p class="fieldset">
+                          <label class="image-replace email" for="signup-email">Location</label>
+                          <input class="full-width has-padding has-border" name="id" type="hidden" value="">
+                          <input class="full-width has-padding has-border" name="location" type="text" placeholder="Location">
+                          <span class="error-message">Your location can only contain numeric and alphabetic symbols!</span>
+                        </p>
                     
-          
-                    <p class="fieldset">
-                      <button type="submit"  class="btn text-dark update">Save</button>
-                      <button id="closeModal" type="button"  class="btn text-dark update">Cancel</button>
-                    </p>
-                  </form>
-          
-                </div>
-          
-                
-                
+                    
+                    
+                    
+                    
+                        <p class="fieldset">
+                          <button type="submit" class="btn text-dark update">Save</button>
+                          <button id="closeModal" type="button" class="btn text-dark update">Cancel</button>
+                        </p>
+                      </form>
+                    
+                    </div>
+
+
+
+
+
+
+              </div>
+              <div class="modal-footer">
+                <h3>Modal Footer</h3>
               </div>
             </div>
-
-
-
-          <!-- <div class="card-header border-0">
-              <div class="box-nav d-flex justify-between">
-                <button type="button" href="/add-user" class="modal-btn">Register ESD</button>
-                
-              </div>
-
-          
           </div>
+
+
           
-          <div class="modal-bg">
-            <div class="modal">
-              <h2>asdasdasd</h2>
-              <label for="name">asd</label>
-              <input type="text" name="name"/>
-              <label for="email">Email</label>
-              <input type="email" name="email"/>
-              <button>asdasd</button>
-              <span class="modal-close">x</span>
-            </div>
-          </div> -->
 
           <!-- Light table -->
           <div class="table-responsive">
@@ -112,73 +92,13 @@
                   <th scope="col" class="sort" data-sort="Location">Location</th>
                   <th scope="col" class="sort" data-sort="Date">Date</th>
                   <th scope="col" class="sort" data-sort="Action">Action</th>
-                  <!-- <th scope="col">Users</th>
-                  <th scope="col" class="sort" data-sort="completion">Completion</th> -->
-                  <!-- <th scope="col"></th> -->
+                  
                 </tr>
               </thead>
               <tbody class="list">
                         <%- include('_showEsdInfo') %>
 
-                <!-- <tr>
-                  <th scope="row">
-                    <div class="media align-items-center">
-                      <a href="#" class="avatar rounded-circle mr-3">
-                        <img alt="Image placeholder" src="/assets/img/theme/bootstrap.jpg">
-                      </a>
-                      <div class="media-body">
-                        <span class="name mb-0 text-sm">Argon Design System</span>
-                      </div>
-                    </div>
-                  </th>
-                  <td class="budget">
-                    $2500 USD
-                  </td>
-                  <td>
-                    <span class="badge badge-dot mr-4">
-                      <i class="bg-warning"></i>
-                      <span class="status">pending</span>
-                    </span>
-                  </td>
-                  <td>
-                    <div class="avatar-group">
-                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Ryan Tompson">
-                        <img alt="Image placeholder" src="/assets/img/theme/team-1.jpg">
-                      </a>
-                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Romina Hadid">
-                        <img alt="Image placeholder" src="/assets/img/theme/team-2.jpg">
-                      </a>
-                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Alexander Smith">
-                        <img alt="Image placeholder" src="/assets/img/theme/team-3.jpg">
-                      </a>
-                      <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip" data-original-title="Jessica Doe">
-                        <img alt="Image placeholder" src="/assets/img/theme/team-4.jpg">
-                      </a>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <span class="completion mr-2">60%</span>
-                      <div>
-                        <div class="progress">
-                          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown">
-                      <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr> -->
+                
                 
                 
               </tbody>
@@ -220,7 +140,7 @@
 
 
 
-  <script>
+  <!-- <script>
     document.addEventListener('submit', (e) => {
         // Store reference to form to make later code easier to read
         const form = e.target;
@@ -247,4 +167,4 @@
         // Prevent the default form submit
        
       });
-  </script>
+  </script> -->
